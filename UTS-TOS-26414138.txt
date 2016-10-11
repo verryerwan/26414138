@@ -1,0 +1,98 @@
+1.
+curl www.elevenia.co.id/prd-apple-iphone-7-
+
+plus-black-128gb-garansi-6242166
+59 7-19 * * 1-5 
+
+http://www.elevenia.co.id/prd-apple-iphone-7-
+
+plus-black-128gb-garansi-6242166 
+if [ -n "$15000" ]; then
+    echo "$harga akhir" |mail -s "space alert" 
+
+address@domain.com sends that line to the body 
+
+of an email to address@domain.com titled 
+
+"Murah"
+fi
+
+2.
+Import-Csv 
+
+"http://stats.labs.apnic.net/ipv6/ID"  | 
+Group-Object ASN,AS Name,IPv6 Capable,IPv6 
+
+Preferred,Samples| 
+Select-Object -Property Count, 
+    @{ Name = 'ASN'; Expression = { $_.Name } 
+
+}, 
+    @{ Name = 'AS Name'; Expression = { 
+
+($_.Group | Measure-Object -Property Units -
+
+Sum).Sum } } | 
+Export-Csv new.csv  -NoTypeInformation
+
+
+Select-Object @{Name='ASN'   ;Expression=
+
+{$_.Values[0]}},
+              @{Name='AS Name';Expression=
+
+{$_.Values[1]}},
+              @{Name='IPv6 Capable' 
+
+;Expression={$_.Values[2]}},
+@{Name='IPv6 Preferred' ;Expression=
+
+{$_.Values[3]}},
+@{Name='Samples' ;Expression={$_.Values[4]}},
+
+              }}
+3.$data = import-csv $tabel.csv | Select-
+
+Object -property ASN,AS Name,IPv6 Capable,IPv6 
+
+Preferred,Samples|  
+    $view 
+\documentclass{article}
+\usepackage{booktabs}
+\begin{document}
+\begin{center}
+\begin{tabular}{||c c c c||} 
+ \hline
+ ASN & ASN Name & IPv6 Capable & IPv6 
+
+Preferred & Samples \\ [0.5ex] 
+ \hline\hline
+ for i in range(len(buffer)):
+      for j in range(len(buffer[0])):
+          print buffer[ASN]&[ASName]
+
+[IPv6Capable]&[IPv6Preferred]&[Samples ]\\ 
+ \hline
+ // [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\end{document}
+
+4.
+awk '
+{ 
+    for (i=1; i<=NF; i++)  {
+        a[NR,i] = $i
+    }
+}
+NF>p { p = NF }
+END {    
+    for(j=1; j<=p; j++) {
+        str=a[1,j]
+        for(i=2; i<=NR; i++){
+            str=str" "a[i,j];
+        }
+        print str
+    }
+}' file

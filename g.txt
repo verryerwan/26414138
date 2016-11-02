@@ -1,0 +1,32 @@
+-#wget link namafile
+-#grep -Po '(?<=kata-kata).*(?=kata-kata)' namafile
+
+wget http://www.elevenia.co.id/prd-apple-iphone-7-plus-black-128gb-garansi-6242166 -0 iphone.html
+
++grep -Po '(?<=price notranslate">).*(?=</span>)' iphone.html > data.txt
+
+-grep -Po '(?<=price notranslate">).*(?=</span>)' iphone.html
+
++harga= grep -Po 'Rp \K\w+' data.txt
++echo $harga
+
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://hostname/resource
+
+curl -H "Accept: application/xml" -H "Content-Type: application/xml" -X GET http://hostname/resource
+
+curl --data "param1=value1&param2=value2" http://hostname/resource
+
+curl --request POST 'http://www.somedomain.com/'
+curl --request DELETE 'http://www.somedomain.com/'
+curl --request PUT 'http://www.somedomain.com/'
+
+curl --request POST 'http://www.somedomain.com/login/' \
+--data 'username=myusername&password=mypassword'
+
+curl --request GET 'http://www.somedomain.com/result?search_query=my_keyword'
+
+
+curl --request PUT 'http://www.somedomain.com/rest-api/user/12345/'\
+--data 'email=myemail@gmail.com'
+
+

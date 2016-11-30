@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function hello{
+   if [ -z $1 ]; then
+      echo "Hello, apa khabar anda"
+   else
+      echo "Hello $1, apa khabar";
+   fi
+}
+
+#masukkan nama anda disini
+echo -n "Nama anda :";
+read nama
